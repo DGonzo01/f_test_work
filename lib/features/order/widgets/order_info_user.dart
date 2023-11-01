@@ -79,6 +79,7 @@ class _OrderInfoUserState extends State<OrderInfoUser> {
                     autofillHints: [
                       AutofillHints.email,
                     ],
+                    keyboardType: TextInputType.emailAddress,
                     title: 'Email',
                     hint: "Email",
                     icon: Images.email,
@@ -88,6 +89,7 @@ class _OrderInfoUserState extends State<OrderInfoUser> {
                     autofillHints: [
                       AutofillHints.telephoneNumber,
                     ],
+                    keyboardType: TextInputType.phone,
                     title: 'Phone',
                     hint: "Phone",
                     icon: Images.phone,
@@ -115,6 +117,7 @@ class _OrderInfoUserState extends State<OrderInfoUser> {
                     autofillHints: [
                       AutofillHints.postalCode,
                     ],
+                    keyboardType: TextInputType.number,
                     title: 'ZipCode',
                     hint: "ZipCode",
                     icon: Images.zipcode,
