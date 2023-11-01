@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
@@ -26,30 +27,35 @@ class CommonTextInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IgnorePointer(
-        ignoring: ignoring,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (title.isNotEmpty) Text(title),
-            ReactiveTextField(
-              formControlName: formControlName,
-              // controller: controller,
-              autofillHints: autofillHints,
-              obscureText: obscureText,
-              keyboardType: keyboardType,
-              decoration: InputDecoration(
-                  hintText: hint,
-                  prefixIcon: IconButton(
-                    icon: SvgPicture.asset(
-                      icon,
-                      color: const Color(0xffFF5D2A),
-                      height: 20,
-                    ),
-                    onPressed: () {},
-                  )),
-            )
-          ],
-        ));
+    return Padding(
+        padding: EdgeInsets.only(bottom: 12),
+        child: IgnorePointer(
+            ignoring: ignoring,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (title.isNotEmpty) Text(title),
+                SizedBox(
+                  height: 8.w,
+                ),
+                ReactiveTextField(
+                  formControlName: formControlName,
+                  // controller: controller,
+                  autofillHints: autofillHints,
+                  obscureText: obscureText,
+                  keyboardType: keyboardType,
+                  decoration: InputDecoration(
+                      hintText: hint,
+                      prefixIcon: IconButton(
+                        icon: SvgPicture.asset(
+                          icon,
+                          color: const Color(0xffFF5D2A),
+                          height: 20,
+                        ),
+                        onPressed: () {},
+                      )),
+                )
+              ],
+            )));
   }
 }

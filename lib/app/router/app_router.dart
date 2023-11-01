@@ -6,7 +6,7 @@ import 'package:f_test_work/app/router/app_router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: FirstOrderRoute.page, initial: true),
+        AutoRoute(page: OrderRoute.page, initial: true),
         // AutoRoute(page: FirstOrderRoute.page, initial: true),
       ];
 }

@@ -8,7 +8,7 @@ class BaseContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20).copyWith(top: 12),
+      // padding: const EdgeInsets.symmetric(horizontal: 20).copyWith(top: 0),
       child: child,
     );
   }
